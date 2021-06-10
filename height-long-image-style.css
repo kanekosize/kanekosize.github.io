@@ -1,0 +1,69 @@
+/* 가로 1000보다 작을때 */
+@media only screen and (max-width: 1000px) {
+  .swiper-slide img {
+    max-width: 100%;
+    /* 이미지 최대너비를 제한, 슬라이드에 이미지가 여러개가 보여질때 필요 */
+    min-width: 100%;
+  }
+
+  #vsImg {
+    max-width: 50%;
+  }
+
+  #answer_o, #answer_x, #answer_triangle {
+    max-width: 70%;
+  }
+
+  .kakaoHeaderLongBanner {
+    display: none;
+  }
+
+  .kakaoHeaderShortBanner {
+    display: show;
+  }
+
+  .kakaoFooterLongBanner {
+    display: none;
+  }
+
+  .kakaoFooterShortBanner {
+    display: show;
+  }
+}
+
+/* 가로 1000보다 클때 */
+@media only screen and (min-width: 1000px) {
+  .swiper-slide img {
+    max-width: 100%;
+    /* 이미지 최대너비를 제한, 슬라이드에 이미지가 여러개가 보여질때 필요 */
+    min-width: 100%;
+    min-height: 100%;
+  }
+
+  .kakaoHeaderLongBanner {
+    display: show;
+  }
+
+  .kakaoHeaderShortBanner {
+    display: none;
+  }
+
+  .kakaoFooterLongBanner {
+    display: show;
+  }
+
+  .kakaoFooterShortBanner {
+    display: none;
+  }
+}
+
+/* 세로 600보다 작을때 */
+@media only screen and (max-height: 600px) {
+  #vsImg {
+    max-width: 50%;
+  }
+
+  #answer_o, #answer_x, #answer_triangle {
+    max-width: 70%;
+  }
+}

@@ -1,0 +1,387 @@
+@import url('https://fonts.googleapis.com/css2?family=Nanum+Gothic&display=swap');
+
+* {
+  font-family: "Nanum Gothic";
+  margin: 0;
+}
+
+A:link {
+  text-decoration: none;
+  color: #EFEFEF;
+}
+
+A:visited {
+  text-decoration: none;
+  color: #EFEFEF;
+}
+
+A:active {
+  text-decoration: none;
+  color: #EFEFEF;
+}
+
+A:hover {
+  text-decoration: none;
+  color: #EFEFEF;
+}
+
+.tooltip {
+  font-size: 5vmin;
+  font-weight: bold;
+  cursor: help;
+}
+
+[data-tooltip-text]:hover {
+  position: relative;
+}
+
+[data-tooltip-text]:hover:after {
+  background-color: #000000;
+  background-color: rgba(0, 0, 0, 0.8);
+  -webkit-box-shadow: 0px 0px 3px 1px rgba(50, 50, 50, 0.4);
+  -moz-box-shadow: 0px 0px 3px 1px rgba(50, 50, 50, 0.4);
+  box-shadow: 0px 0px 3px 1px rgba(50, 50, 50, 0.4);
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 5px;
+  color: #EFEFEF;
+  font-size: 2vmin;
+  content: attr(data-tooltip-text);
+  letter-spacing: 0.05em;
+  margin-bottom: 10px;
+  top: 130%;
+  left: 0;
+  padding: 7px 12px;
+  position: absolute;
+  width: auto;
+  min-width: 50px;
+  max-width: 500px;
+  word-wrap: break-word;
+  z-index: 9999;
+  white-space: pre-line;
+  text-align: center;
+}
+
+#indexMainLogo {
+  font-size: 9vmin;
+  font-weight: bold;
+  color: #EFEFEF;
+  text-shadow: 1px 1px 1px black;
+  opacity: 0.9;
+  white-space: nowrap;
+  text-decoration: underline;
+  text-underline-position: under;
+}
+
+#indexMainURL {
+  font-size: 5vmin;
+  font-weight: bold;
+  color: #EFEFEF;
+  opacity: 0.9;
+  white-space: nowrap;
+}
+
+#divForIndexBackground {
+  width: 100%;
+  height: inherit;
+  background: url('img/indexwallpaper.jpg');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+.headerLogo {
+  display: block;
+  position: absolute;
+  width: auto;
+  font-size: 4vmin;
+  text-align: left;
+  font-weight: bold;
+  color: #EFEFEF;
+  cursor: pointer;
+}
+
+#headerTopic {
+  position: absolute;
+  width: 100%;
+  font-size: 5vmin;
+  color: #EFEFEF;
+  font-weight: bold;
+  cursor: help;
+}
+
+#playCount {
+  width: 100%;
+  position: absolute;
+  text-align: right;
+  font-size: 4vmin;
+  color: #EFEFEF;
+}
+
+main {
+  background: #323639;
+  max-width: 100%;
+  min-width: 100%;
+  width: 100%;
+  text-align: center;
+  vertical-align: middle;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+header {
+  background: black;
+  color: #EFEFEF;
+  height: 60px;
+  max-width: none;
+  min-width: 100%;
+  text-align: center;
+  z-index: 10;
+}
+
+footer {
+  background: black;
+  color: #EFEFEF;
+  height: 100px;
+  max-width: none;
+  min-width: 100%;
+  bottom: 0;
+  position: fixed;
+  text-align: center;
+  z-index: 9;
+}
+
+.opacityLayer {
+  width: 100%;
+  height: inherit;
+  background: black;
+  position: absolute;
+  z-index: 2;
+  opacity: 0.68;
+}
+
+#gameoverPopup {
+  background: #323639;
+  width: 100%;
+  height: inherit;
+  position: absolute;
+  z-index: 5;
+  display: none;
+}
+
+#gameoverTopic {
+  font-size: 6vmin;
+  color: #EFEFEF;
+  font-weight: 600;
+  text-decoration: underline;
+  text-underline-position: under;
+}
+
+#gameoverCount {
+  font-size: 12vmin;
+  color: #f4d47c;
+  font-weight: 800;
+  text-shadow: 1px 2px 3px black;
+}
+
+#gameoverCountMaxnum {
+  font-size: 4vmin;
+  color: #f4d47c;
+  font-weight: 600;
+}
+
+#gameoverMention {
+  font-size: 4.5vmin;
+  color: #EFEFEF;
+  font-weight: 600;
+  text-shadow: 1px 1px 1px black;
+}
+
+#selectTopic {
+  background: transparent;
+  width: 60vmin;
+  height: 6vmin;
+  font-size: 2.5vmin;
+  border-color: #EFEFEF;
+  border: 1;
+  border-style: solid;
+  border-radius: 5vmin;
+  border-width: medium;
+  text-align-last: center;
+  margin-top: 2vmin;
+  margin-bottom: 2vmin;
+  font-weight: bold;
+  color: #EFEFEF;
+}
+
+#startButton {
+  font-size: 2.5vmin;
+  font-weight: bold;
+  width: auto;
+  height: 6vmin;
+  border: 1;
+  border-style: solid;
+  border-radius: 5vmin;
+  border-width: medium;
+  border-color: #EFEFEF;
+  padding: 1vmin;
+  background: #EFEFEF;
+  color: black;
+  border-color: #EFEFEF;
+}
+
+#startButton:hover:enabled {
+  background-color: transparent;
+  color: #EFEFEF;
+  border-color: #EFEFEF;
+  cursor: pointer;
+}
+
+#startButton:disabled {
+  opacity: 0.5;
+}
+
+option {
+  color: black;
+}
+
+.gameoverButtons {
+  font-size: 3vmin;
+  border: 1;
+  border-style: solid;
+  border-radius: 1.5vmin;
+  border-width: medium;
+  border-color: #EFEFEF;
+  padding: 0.7vmin;
+  color: #EFEFEF;
+  background: transparent;
+}
+
+.gameoverButtons:hover {
+  background-color: #EFEFEF;
+  color: black;
+  cursor: pointer;
+}
+
+#indexcenter {
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.boxWrapper {
+  width: 50%;
+  height: inherit;
+  float: left;
+  color: #EFEFEF;
+  display: table;
+  font-size: 1vmin;
+}
+
+#leftbox, #rightbox {
+  display: table-cell;
+  vertical-align: middle;
+}
+
+#leftbox_name, #rightbox_name {
+  font-size: 6vmin;
+  word-break: keep-all;
+}
+
+#leftbox_tip, #rightbox_tip {
+  font-size: 3vmin;
+}
+
+#leftbox_valueandunit, #rightbox_valueandunit {}
+
+#leftbox_value, #rightbox_value {
+  font-size: 4vmin;
+}
+
+.unit {
+  font-size: 4vmin;
+}
+
+.rightbox_button {
+  font-size: 3.2vmin;
+  font-weight: bold;
+  border: 1;
+  border-style: solid;
+  border-radius: 5vmin;
+  border-width: medium;
+  border-color: #EFEFEF;
+  padding: 1vmin;
+  background: transparent;
+  color: #EFEFEF;
+}
+
+.rightbox_button:hover {
+  background: #EFEFEF;
+  color: black;
+  cursor: pointer;
+}
+
+.swiper-slide {
+  text-align: center;
+  display: flex;
+  /* 내용을 중앙정렬 하기위해 flex 사용 */
+  align-items: center;
+  /* 위아래 기준 중앙정렬 */
+  justify-content: center;
+  /* 좌우 기준 중앙정렬 */
+}
+
+.kakaoHeaderShortBanner, .kakaoHeaderLongBanner {
+  position: fixed;
+  height: inherit;
+  margin: 0 auto;
+  left: 0;
+  right: 0;
+  top: 0;
+}
+
+.header_kakao_ad_area {
+  position: absolute;
+  margin: 0 auto;
+  left: 0;
+  right: 0;
+  top: 0;
+  z-index: 99;
+}
+
+.kakaoHeaderLongBanner {
+  width: 728px;
+  z-index: 99;
+}
+
+.kakaoHeaderShortBanner {
+  width: 320px;
+}
+
+.footer_kakao_ad_area {
+  position: absolute;
+  margin: 0 auto;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+
+.kakaoFooterShortBanner {
+  width: 320px;
+}
+
+.kakaoFooterLongBanner, .kakaoFooterShortBanner {
+  position: fixed;
+  height: inherit;
+  bottom: 0;
+  margin: 0 auto;
+  left: 0;
+  right: 0;
+}
+
+.swiper-container {
+  font-size: 0;
+}
