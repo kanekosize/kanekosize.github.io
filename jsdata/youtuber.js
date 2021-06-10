@@ -16,5 +16,5 @@ const gameImageArray = ["kane/Koreanmeme.png",	"kane/sorry.png",	"kane/pear.png"
 
 const gameUnit = "명";
 
-const overlookRange = 0.2;
+const overlookRange = 0.1;
 //////////////////////////////////////////////////////////////////////////////////////////////////////
