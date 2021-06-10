@@ -1,7 +1,147 @@
+
 <!DOCTYPE html>
-<html>
+<html lang="ko" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>케인 코크기 맞추기</title>
+  <meta name="title" content="케인 코크기 맞추기">
+  <meta name="description" content="케인관련 단어 검색량 비교 게임.">
+  <meta name="keywords" content="케인밈 배틀">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="무엇이 더 클까">
+  <meta property="og:site_name" content="무엇이 더 클까">
+  <meta property="og:description" content="주제(영화 관객 수, 유튜버 구독자 수, 애니 BD 판매량 등등)에 따라 두 수 중 무엇이 더 클까 맞히는 배틀 대결 게임입니다">
+  <meta property="og:image" content="https://vsbattle.me/img/og_img.jpg">
+  <meta property="og:url" content="https://kanekosize.github.io/">
+
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-1T7XT1BRH8"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+
+    function gtag() {
+      dataLayer.push(arguments);
+    }
+    gtag('js', new Date());
+    gtag('config', 'G-1T7XT1BRH8');
+  </script>
+
+  <script data-ad-client="ca-pub-9277740702016707" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+  <script src="script.js"></script>
+
+  <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.css" />
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="height-long-image-style.css">
+  <link rel="shortcut icon" href="img/vs.ico">
+  <link rel="icon" href="img/vs.ico">
+</head>
+
 <body>
-<h1>Hello World</h1>
-<p>I'm hosted with GitHub Pages.</p>
+  <header>
+    <div style="display:table; width:100%; height:inherit;">
+      <div style="display:table-cell; vertical-align:top;">
+        <div id="playCount"></div>
+        <!-- 주제별 변경 -->
+        <h1 id="headerTopic" data-tooltip-text="2021년 5월 네이버 기준 데이터입니다
+
+        오차 범위 20% 이내는 틀려도 봐줍니다">무엇이 더 많이 검색됐을까?</h1>
+      </div>
+    </div>
+  </header>
+
+
+
+
+
+  <main class="gameplayMain">
+    <div class="swiper-container">
+      <div class="swiper-wrapper" id="#gameImageWrapper">
+      </div>
+    </div>
+
+    <div class="opacityLayer"></div>
+
+    <div style="width:100%; height:inherit;  position:absolute; z-index:3;">
+
+
+      <div class="boxWrapper">
+        <div id="leftbox">
+          <div id="leftbox_name"></div>
+          <br><br><br><br><br>
+          <div id="leftbox_valueandunit">
+            <span id="leftbox_value"></span>
+            <span id="leftbox_unit" class="unit"></span>
+          </div>
+        </div>
+      </div>
+
+      <div class="boxWrapper">
+        <div id="rightbox">
+          <div id="rightbox_name">
+          </div>
+          <br>
+          <br><br><br><br><br>
+          <div>
+            <div id="rightbox_valueandunit">
+              <span id="rightbox_value" style="display:none;"></span>
+              <span id="rightbox_unit" class="unit" style="display:none;"></span>
+              <span style="font-size:4vmin; visibility:hidden;"></span>
+            </div>
+            <div id="rightbox_buttonsWrapper">
+              <button type="button" id="biggerButton" class="rightbox_button">△ 크다</button>
+              <button type="button" id="smallerButton" class="rightbox_button">▽ 작다</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div style="position:absolute; z-index:4; pointer-events:none;"><img id="vsImg" src="img/vs.png"></div>
+    <div style="position:absolute; z-index:5; pointer-events:none;"><img id="answer_o" class="answerImage" src="img/o.png" style="display:none;"></div>
+    <div style="position:absolute; z-index:5; pointer-events:none;"><img id="answer_x" class="answerImage" src="img/x.png" style="display:none;"></div>
+    <div style="position:absolute; z-index:5; pointer-events:none;"><img id="answer_triangle" class="answerImage" src="img/triangle.png" style="display:none;"></div>
+
+    <div id="gameoverPopup">
+      <div style="display:table; width:100%; height:inherit;">
+        <div style="display:table-cell; vertical-align:middle;">
+          <!-- 주제별 변경 -->
+          <div id="gameoverTopic">당신의 점수는</div>
+          <br>
+          <div><span id="gameoverCount"></span><span id="gameoverCountMaxnum"></span></div>
+          <br>
+          <div id="gameoverMention"></div>
+          <br><br><br>
+          <div id="gameoverButtonWrapper">
+            <button id="gameoverGoToMain" type="button" class="gameoverButtons">포기하기</button>
+            <bubbnntton id="gameoverReStart" type="button" class="gameoverButtons">재수하기</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+    <script src="slide.js"></script>
+    <!-- 주제별 변경 -->
+    <script src="jsdata/youtuber.js"></script>
+    <script src="game.js"></script>
+  </main>
+
+  <footer>
+    <div class="kakaoFooterLongBanner">
+      <ins class="footer_kakao_ad_area" style="display:none;" data-ad-unit="DAN-fF90eCsvavehKkV2" data-ad-width="728" data-ad-height="90"></ins>
+      <script type="text/javascript" src="//t1.daumcdn.net/kas/static/ba.min.js" async></script>
+    </div>
+
+    <div class="kakaoFooterShortBanner">
+      <ins class="footer_kakao_ad_area" style="display:none;" data-ad-unit="DAN-TatC9rDYAhFU9LO0" data-ad-width="320" data-ad-height="100"></ins>
+      <script type="text/javascript" src="//t1.daumcdn.net/kas/static/ba.min.js" async></script>
+    </div>
+  </footer>
+
 </body>
+
 </html>
