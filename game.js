@@ -72,12 +72,7 @@ $(document).ready(function() {
     if (leftGameValue < rightGameValue) {
       correctAnswer(true);
     } else {
-      //틀렸어도 오차가 10% 미만이면 봐준다
-      if (Math.abs(leftGameValue - rightGameValue) / Math.max(leftGameValue, rightGameValue) <= overlookRange) {
-        correctAnswer(false);
-      } else {
         incorrectAnswer();
-      }
     }
   });
 
@@ -87,12 +82,7 @@ $(document).ready(function() {
     if (leftGameValue > rightGameValue) {
       correctAnswer(true);
     } else {
-      //틀렸어도 오차가 10% 미만이면 봐준다
-      if (Math.abs(leftGameValue - rightGameValue) / Math.max(leftGameValue, rightGameValue) <= overlookRange) {
-        correctAnswer(false);
-      } else {
         incorrectAnswer();
-      }
     }
   });
 
